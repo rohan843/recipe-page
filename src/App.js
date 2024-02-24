@@ -57,23 +57,23 @@ function App() {
     <div className="container">
       <img src={data.imageSrc} alt={data.heading} />
       <h1 className="main-heading">{data.heading}</h1>
-      <p className="main-desc">{data.desc}</p>
+      <p className="text-normal">{data.desc}</p>
       <section className="preparation-box">
         <h3>Preparation time</h3>
         <ul>{prepList}</ul>
       </section>
       <section>
-        <h2>Ingredients</h2>
+        <h2 className="section-header">Ingredients</h2>
         <ul>{ingredientList}</ul>
       </section>
       <hr />
       <section>
-        <h2>Instructions</h2>
+        <h2 className="section-header">Instructions</h2>
         <ol>{instrsList}</ol>
       </section>
       <hr />
       <section>
-        <h2>Nutrition</h2>
+        <h2 className="section-header">Nutrition</h2>
         <p>
           The table below shows nutritional values per serving without the
           additional fillings.

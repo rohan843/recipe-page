@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+:root {
+    /* Colors */
+    --dark-charcoal: #312E2C;
+    --brandy-red: #854632;
+    --wenge-brown: #5F564D;
+
+    /* Weights */
+    --extrabold: 600;
+}
+
 html {
     background-color: #F3E5D7;
 }
@@ -13,4 +25,32 @@ img {
     padding: 30px;
     border-radius: 24px;
     margin: 60px auto;
+}
+
+.main-heading {
+    font-family: "Young Serif", serif;
+    font-weight: 400;
+    color: var(--dark-charcoal, black);
+    font-size: 40px;
+}
+
+.section-header {
+    font-family: "Young Serif", serif;
+    font-weight: 400;
+    color: var(--brandy-red, brown);
+    font-size: 28px;
+}
+
+.preparation-box h3 {
+    font-family: "Outfit", sans-serif;
+    font-weight: var(--extrabold, 600);
+    color: var(--brandy-red, brown);
+    font-size: 20px;
+}
+
+.text-normal {
+    font-family: "Outfit", sans-serif;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--wenge-brown, black);
 }
