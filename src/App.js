@@ -2,9 +2,9 @@ const data = {
   heading: "Simple Omelette Recipe",
   desc: "An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked to perfection, optionally filled with your choice of cheese, vegetables, or meats.",
   prepData: [
-    "Total: Approximately 10 minutes",
-    "Preparation: 5 minutes",
-    "Cooking: 5 minutes",
+    ["Total", "Approximately 10 minutes"],
+    ["Preparation", "5 minutes"],
+    ["Cooking", "5 minutes"],
   ],
   ingredientData: [
     "2-3 large eggs",
@@ -44,7 +44,14 @@ const data = {
 };
 
 function App() {
-  const prepList = data.prepData.map((elt, ind) => <li key={ind}>{elt}</li>);
+  const prepList = data.prepData.map((elt, ind) => (
+    <li key={ind} className="text">
+      <span>
+        <strong className="text-bold">{elt[0]}:</strong>{" "}
+        <span className="text-regular">{elt[1]}</span>
+      </span>
+    </li>
+  ));
   const ingredientList = data.ingredientData.map((elt, ind) => (
     <li key={ind}>{elt}</li>
   ));
@@ -57,7 +64,7 @@ function App() {
     <div className="container">
       <img src={data.imageSrc} alt={data.heading} />
       <h1 className="main-heading">{data.heading}</h1>
-      <p className="text-normal">{data.desc}</p>
+      <p className="text text-regular">{data.desc}</p>
       <section className="preparation-box">
         <h3>Preparation time</h3>
         <ul>{prepList}</ul>
