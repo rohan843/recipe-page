@@ -86,6 +86,12 @@ li {
 ul li::marker {
     content: "⦁";
     font-size: 14px;
+    color: var(--brandy-red);
+}
+
+ol li::marker {
+    font-weight: var(--bold);
+    color: var(--brandy-red);
 }
 
 section {
