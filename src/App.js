@@ -1,70 +1,77 @@
+const data = {
+  heading: "Simple Omelette Recipe",
+  desc: "An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked to perfection, optionally filled with your choice of cheese, vegetables, or meats.",
+  prepData: [
+    "Total: Approximately 10 minutes",
+    "Preparation: 5 minutes",
+    "Cooking: 5 minutes",
+  ],
+  ingredientData: [
+    "2-3 large eggs",
+    "Salt, to taste",
+    "Pepper, to taste",
+    "1 tablespoon of butter or oil",
+    "Optional fillings: cheese, diced vegetables, cooked meats, herbs",
+  ],
+  instrs: [
+    [
+      "Beat the eggs",
+      "In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. You can add a tablespoon of water or milk for a fluffier texture.",
+    ],
+    [
+      "Heat the pan",
+      "Place a non-stick frying pan over medium heat and add butter or oil.",
+    ],
+    [
+      "Cook the omelette",
+      "Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure the eggs evenly coat the surface.",
+    ],
+    [
+      "Add fillings (optional)",
+      "When the eggs begin to set at the edges but are still slightly runny in the middle, sprinkle your chosen fillings over one half of the omelette.",
+    ],
+    [
+      "Fold and serve",
+      "As the omelette continues to cook, carefully lift one edge and fold it over the fillings. Let it cook for another minute, then slide it onto a plate.",
+    ],
+    ["Enjoy", "Serve hot, with additional salt and pepper if needed."],
+  ],
+  cals: "277kcal",
+  carbs: "0g",
+  prot: "20g",
+  fat: "22g",
+};
+
 function App() {
+  const prepList = data.prepData.map((elt, ind) => <li key={ind}>{elt}</li>);
+  const ingredientList = data.ingredientData.map((elt, ind) => (
+    <li key={ind}>{elt}</li>
+  ));
+  const instrsList = data.instrs.map((elt, ind) => (
+    <li key={ind}>
+      <strong>{elt[0]}:</strong> {elt[1]}
+    </li>
+  ));
   return (
-    <>
-      <h1>Simple Omelette Recipe</h1>
-      <p>
-        An easy and quick dish, perfect for any meal. This classic omelette
-        combines beaten eggs cooked to perfection, optionally filled with your
-        choice of cheese, vegetables, or meats.
-      </p>
+    <div>
+      <h1>{data.heading}</h1>
+      <p>{data.desc}</p>
       <section>
         <h3>Preparation time</h3>
-        <ul>
-          <li>Total: Approximately 10 minutes</li>
-          <li>Preparation: 5 minutes</li>
-          <li>Cooking: 5 minutes</li>
-        </ul>
+        <ul>{prepList}</ul>
       </section>
       <section>
         <h2>Ingredients</h2>
-        <ul>
-          <li>2-3 large eggs</li>
-          <li>Salt, to taste</li>
-          <li>Pepper, to taste</li>
-          <li>1 tablespoon of butter or oil</li>
-          <li>
-            Optional fillings: cheese, diced vegetables, cooked meats, herbs
-          </li>
-        </ul>
+        <ul>{ingredientList}</ul>
       </section>
       <hr />
       <section>
         <h2>Instructions</h2>
-        <ol>
-          <li>
-            Beat the eggs: In a bowl, beat the eggs with a pinch of salt and
-            pepper until they are well mixed. You can add a tablespoon of water
-            or milk for a fluffier texture.
-          </li>
-
-          <li>
-            Heat the pan: Place a non-stick frying pan over medium heat and add
-            butter or oil.
-          </li>
-          <li>
-            Cook the omelette: Once the butter is melted and bubbling, pour in
-            the eggs. Tilt the pan to ensure the eggs evenly coat the surface.
-          </li>
-
-          <li>
-            Add fillings (optional): When the eggs begin to set at the edges but
-            are still slightly runny in the middle, sprinkle your chosen
-            fillings over one half of the omelette.
-          </li>
-
-          <li>
-            Fold and serve: As the omelette continues to cook, carefully lift
-            one edge and fold it over the fillings. Let it cook for another
-            minute, then slide it onto a plate.
-          </li>
-
-          <li>Enjoy: Serve hot, with additional salt and pepper if needed.</li>
-        </ol>
+        <ol>{instrsList}</ol>
       </section>
       <hr />
       <section>
         <h2>Nutrition</h2>
-
         <p>
           The table below shows nutritional values per serving without the
           additional fillings.
@@ -73,24 +80,24 @@ function App() {
           <tbody>
             <tr>
               <td>Calories</td>
-              <td>277kcal</td>
+              <td>{data.cals}</td>
             </tr>
             <tr>
               <td>Carbs</td>
-              <td>0g</td>
+              <td>{data.carbs}</td>
             </tr>
             <tr>
               <td>Protein</td>
-              <td>20g</td>
+              <td>{data.prot}</td>
             </tr>
             <tr>
               <td>Fat</td>
-              <td>22g</td>
+              <td>{data.fat}</td>
             </tr>
           </tbody>
         </table>
       </section>
-      <div class="attribution">
+      <div className="attribution">
         Challenge by
         <a
           href="https://www.frontendmentor.io?ref=challenge"
@@ -101,7 +108,7 @@ function App() {
         </a>
         . Coded by <a href="https://rohan843.netlify.app">Rohan Sharma</a>.
       </div>
-    </>
+    </div>
   );
 }
 
