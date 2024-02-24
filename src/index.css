@@ -98,3 +98,7 @@ img {
 .text-bold {
     font-weight: var(--bold);
 }
+
+.nutrition table tbody tr td:last-child {
+    color: var(--brandy-red, brown);
+}

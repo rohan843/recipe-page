@@ -53,11 +53,14 @@ function App() {
     </li>
   ));
   const ingredientList = data.ingredientData.map((elt, ind) => (
-    <li key={ind}>{elt}</li>
+    <li key={ind} className="text text-regular">
+      {elt}
+    </li>
   ));
   const instrsList = data.instrs.map((elt, ind) => (
-    <li key={ind}>
-      <strong>{elt[0]}:</strong> {elt[1]}
+    <li key={ind} className="text">
+      <strong className="text-bold">{elt[0]}:</strong>{" "}
+      <span className="text-regular">{elt[1]}</span>
     </li>
   ));
   return (
@@ -69,39 +72,39 @@ function App() {
         <h3>Preparation time</h3>
         <ul>{prepList}</ul>
       </section>
-      <section>
+      <section className="ingredients">
         <h2 className="section-header">Ingredients</h2>
         <ul>{ingredientList}</ul>
       </section>
       <hr />
-      <section>
+      <section className="instructions">
         <h2 className="section-header">Instructions</h2>
         <ol>{instrsList}</ol>
       </section>
       <hr />
-      <section>
+      <section className="nutrition">
         <h2 className="section-header">Nutrition</h2>
-        <p>
+        <p className="text text-regular">
           The table below shows nutritional values per serving without the
           additional fillings.
         </p>
         <table>
           <tbody>
-            <tr>
-              <td>Calories</td>
-              <td>{data.cals}</td>
+            <tr className="text">
+              <td className="text-regular">Calories</td>
+              <td className="text-bold">{data.cals}</td>
             </tr>
-            <tr>
-              <td>Carbs</td>
-              <td>{data.carbs}</td>
+            <tr className="text text-regular">
+              <td className="text-regular">Carbs</td>
+              <td className="text-bold">{data.carbs}</td>
             </tr>
-            <tr>
-              <td>Protein</td>
-              <td>{data.prot}</td>
+            <tr className="text text-regular">
+              <td className="text-regular">Protein</td>
+              <td className="text-bold">{data.prot}</td>
             </tr>
-            <tr>
-              <td>Fat</td>
-              <td>{data.fat}</td>
+            <tr className="text text-regular">
+              <td className="text-regular">Fat</td>
+              <td className="text-bold">{data.fat}</td>
             </tr>
           </tbody>
         </table>
