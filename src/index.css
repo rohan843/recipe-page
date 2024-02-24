@@ -139,3 +139,10 @@ tr .text-regular {
     width: 50%;
     padding-left: 30px;
 }
+
+.attribution {
+    font-size: 12px;
+    font-family: "Outfit", sans-serif;
+    display: flex;
+    justify-content: center;
+}

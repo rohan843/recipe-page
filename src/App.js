@@ -108,15 +108,17 @@ function App() {
         </table>
       </section>
       <div className="attribution">
-        Challenge by
-        <a
-          href="https://www.frontendmentor.io?ref=challenge"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Frontend Mentor
-        </a>
-        . Coded by <a href="https://rohan843.netlify.app">Rohan Sharma</a>.
+        <span>
+          Challenge by{" "}
+          <a
+            href="https://www.frontendmentor.io?ref=challenge"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Frontend Mentor
+          </a>
+          . Coded by <a href="https://rohan843.netlify.app">Rohan Sharma</a>.
+        </span>
       </div>
     </div>
   );
