@@ -40,6 +40,7 @@ const data = {
   carbs: "0g",
   prot: "20g",
   fat: "22g",
+  imageSrc: "/assets/images/image-omelette.jpeg",
 };
 
 function App() {
@@ -54,6 +55,7 @@ function App() {
   ));
   return (
     <div>
+      <img src={data.imageSrc} alt={data.heading} />
       <h1>{data.heading}</h1>
       <p>{data.desc}</p>
       <section>
