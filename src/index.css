@@ -12,7 +12,9 @@
     --light-grey: #e4ded8;
 
     /* Weights */
-    --extrabold: 600;
+    --regular: 400;
+    --bold: 600;
+    --extrabold: 700;
 }
 
 html {
@@ -34,21 +36,21 @@ img {
 
 .main-heading {
     font-family: "Young Serif", serif;
-    font-weight: 400;
+    font-weight: var(--regular);
     color: var(--dark-charcoal, black);
     font-size: 40px;
 }
 
 .section-header {
     font-family: "Young Serif", serif;
-    font-weight: 400;
+    font-weight: var(--regular);
     color: var(--brandy-red, brown);
     font-size: 28px;
 }
 
 .preparation-box h3 {
     font-family: "Outfit", sans-serif;
-    font-weight: var(--extrabold, 600);
+    font-weight: var(--extrabold, 700);
     color: var(--brandy-red, brown);
     font-size: 20px;
 }
@@ -56,6 +58,7 @@ img {
 .text-normal {
     font-family: "Outfit", sans-serif;
     font-size: 16px;
+    font-weight: var(--regular);
     line-height: 150%;
     color: var(--wenge-brown, black);
 }
