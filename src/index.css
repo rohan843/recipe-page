@@ -23,7 +23,7 @@ html {
 }
 
 img {
-    max-width: 100%;
+    width: 100%;
     border-radius: 12px;
 }
 
@@ -64,24 +64,25 @@ img {
     margin-bottom: 16px;
 }
 
-.preparation-box ul {
+ol,
+ul {
+    padding-left: 20px;
     margin: 0;
     margin-bottom: -10px;
-    padding-left: 5px;
 }
 
-.preparation-box ul li {
-    list-style-type: none;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-}
-
-.preparation-box ul li::before {
-    content: "⦁";
-    margin-right: 25px;
-    font-size: 14px;
+.preparation-box ul li::marker {
     color: var(--dark-raspberry, maroon);
+}
+
+li {
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+ul li::marker {
+    content: "⦁";
+    font-size: 14px;
 }
 
 .text {

@@ -46,10 +46,8 @@ const data = {
 function App() {
   const prepList = data.prepData.map((elt, ind) => (
     <li key={ind} className="text">
-      <span>
-        <strong className="text-bold">{elt[0]}:</strong>{" "}
-        <span className="text-regular">{elt[1]}</span>
-      </span>
+      <strong className="text-bold">{elt[0]}:</strong>{" "}
+      <span className="text-regular">{elt[1]}</span>
     </li>
   ));
   const ingredientList = data.ingredientData.map((elt, ind) => (
