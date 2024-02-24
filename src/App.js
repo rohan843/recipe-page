@@ -54,11 +54,11 @@ function App() {
     </li>
   ));
   return (
-    <div>
+    <div className="container">
       <img src={data.imageSrc} alt={data.heading} />
-      <h1>{data.heading}</h1>
-      <p>{data.desc}</p>
-      <section>
+      <h1 className="main-heading">{data.heading}</h1>
+      <p className="main-desc">{data.desc}</p>
+      <section className="preparation-box">
         <h3>Preparation time</h3>
         <ul>{prepList}</ul>
       </section>

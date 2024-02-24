@@ -1,0 +1,16 @@
+html {
+    background-color: #F3E5D7;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 12px;
+}
+
+.container {
+    max-width: 736px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 24px;
+    margin: 60px auto;
+}
