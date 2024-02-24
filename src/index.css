@@ -2,9 +2,14 @@
 
 :root {
     /* Colors */
-    --dark-charcoal: #312E2C;
+    --dark-charcoal: #312e2c;
     --brandy-red: #854632;
-    --wenge-brown: #5F564D;
+    --wenge-brown: #5f564d;
+    --nutmeg: #854632;
+    --dark-raspberry: #7b284f;
+    --rose-white: #fff5fa;
+    --eggshell: #f3e6d8;
+    --light-grey: #e4ded8;
 
     /* Weights */
     --extrabold: 600;
