@@ -11,6 +11,7 @@
     --eggshell: #f3e6d8;
     --light-grey: #e4ded8;
     --snow: #FFF7FB;
+    --white-coffee: #e3ddd7;
 
     /* Weights */
     --regular: 400;
@@ -51,6 +52,7 @@ img {
 
 .preparation-box {
     padding: 28px;
+    padding-bottom: 18px;
     background-color: var(--snow, snow);
     border-radius: 12px;
 }
@@ -68,7 +70,6 @@ ol,
 ul {
     padding-left: 20px;
     margin: 0;
-    margin-bottom: -10px;
 }
 
 .preparation-box ul li::marker {
@@ -83,6 +84,26 @@ li {
 ul li::marker {
     content: "⦁";
     font-size: 14px;
+}
+
+section {
+    margin: 20px 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+h2 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+hr {
+    border: 1px solid var(--white-coffee)
 }
 
 .text {
