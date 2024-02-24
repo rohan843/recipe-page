@@ -92,15 +92,15 @@ function App() {
               <td className="text-regular">Calories</td>
               <td className="text-bold">{data.cals}</td>
             </tr>
-            <tr className="text text-regular">
+            <tr className="text">
               <td className="text-regular">Carbs</td>
               <td className="text-bold">{data.carbs}</td>
             </tr>
-            <tr className="text text-regular">
+            <tr className="text">
               <td className="text-regular">Protein</td>
               <td className="text-bold">{data.prot}</td>
             </tr>
-            <tr className="text text-regular">
+            <tr className="text">
               <td className="text-regular">Fat</td>
               <td className="text-bold">{data.fat}</td>
             </tr>
